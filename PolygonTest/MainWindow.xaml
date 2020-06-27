@@ -1,0 +1,29 @@
+﻿<Window x:Class="PolygonTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PolygonTest" xmlns:oxy="http://oxyplot.org/wpf"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="470" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <oxy:PlotView
+            x:Name="Graph"
+            Width="600"
+            Height="350"
+            Model="{Binding PlotModel}"
+            Grid.Row="0"
+            Margin="10" />
+        <Button
+            Width="100"
+            Height="40"
+            Grid.Row="1"
+            x:Name="btnCalculate"
+            Click="OnClickCalculate"
+            Content="Посчитать сумму" />
+    </Grid>
+</Window>
